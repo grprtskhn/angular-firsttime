@@ -249,14 +249,14 @@ myApp.controller("toDoCtrl1",function($scope){
 			    });
 			  };
 			  
-			  /*$scope.allTask = function() {
+			  $scope.allTask = function() {
 				    var doneTodos = $scope.todos;
 				    $scope.todos = [];
 				    angular.forEach(doneTodos, function(todo) {
 				    $scope.todos.push(todo);
 				    });
 				  };
-		  */
+		  
 		  
 		});
 
