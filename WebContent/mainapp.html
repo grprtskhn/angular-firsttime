@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="angular.js"></script>
+<script type="text/javascript" src="js/myapp.js"></script>
+<title>First time with Angular</title>
+
+<link rel="stylesheet" href="css/mainapp.css">
+</head>
+ 
+<body ng-app="myapp">
+
+<!-- Q1 alert "hello" -->
+
+<!-- <div ng-controller="alrt">
+<button ng-click="display()">Alert</button>
+</div> -->
+
+<!-- Q2 change square to circle -->
+
+<!-- <div ng-controller="changeShape">
+<div class="square" style="border-radius: {{x}}"></div>
+<button ng-click="shapeChange()">Click to change to circle</button>
+</div> -->
+
+
+
+
+<!-- Q3 change the color of list and delete the list item -->
+
+<!-- <div ng-controller="ctrl1">
+
+<ul>
+<li ng-repeat="item in colors track by $index" style="color:{{item}}">{{item}}&nbsp;&nbsp;<button ng-click="del($index)">Delete</button><br><br></li>
+</ul> 
+<input type="text" ng-model="color"> 
+<button ng-click="addInput()">Click to add</button>
+</div>  --> 
+
+<!-- Q4 Traffic Light -->
+
+<!-- <div ng-controller="trfc1">
+<button ng-click="toRed()">Red Light</button>
+<button ng-click="toYellow()">Yellow Light</button>
+<button ng-click="toGreen()">Green Light</button><br><br>
+<img width="350px" height="300px" ng-src={{lightColor}}>
+</div> -->
+
+<!-- Q5 how to access array object -->
+
+
+<!-- <div ng-controller="accessobj">
+
+<ul >
+
+<li style="list-style:none"; ng-repeat="item in grocery">{{item.name}}&nbsp;&nbsp;&nbsp;{{item.price}}&nbsp;&nbsp;&nbsp;{{item.qty}}&nbsp;&nbsp;{{item.soldOut}}</li>
+
+</ul>
+
+</div> -->
+
+<!-- Q6 Reverse custom filters -->
+<!-- <div ng-controller="cusFilt">
+<input tpye="text" ng-model="revfil">
+<p>{{revfil | reverse}}</p>
+<p>{{"Hello" | reverse}}</p>
+</div> --> 
+
+<!-- Q7 First letter capital each word custom filters -->
+<!-- <div ng-controller="customFilt">
+<input tpye="text" ng-model="firstCap">
+<p>{{ firstCap | titleCase}}</p>
+</div>  -->
+
+<!-- Q8 Update and Edit with Angular -->
+<!-- <div ng-controller="ctrl2">
+{{persons}}
+<ul style="list-style: none">
+<li ng-repeat="person in persons">
+<ul ng-repeat="(key,value) in person">
+{{key}}:<input ng-model="person[key]">
+</ul>
+</li>
+</ul>
+<button ng-click="saveChanges">Save this</button>
+</div>
+ -->
+ <!-- Q9 carousel -->
+ 
+ <!-- <div ng-controller="MainCtrl">
+ <img width="300px"; height="300px"; ng-src="{{slides[pic]}}">
+ <button ng-click="prevSlide()">Previous</button>
+ <button ng-click="nextSlide()">Next</button>
+ </div> -->
+ 
+ <!-- Q10 Planets -->
+ <!-- <div ng-controller="planetController">
+    <ul style="list-style:none;">
+      <li ng-repeat="planet in planets | planetSorter" >
+       {{planet}}
+      </li>
+    </ul>
+
+  </div>
+ 
+ 
+</body>
+</html> -->
+
+<!-- Q11 To Do List -->
+
+<h2>To do list</h2>
+
+<div ng-controller="toDoCtrl1">
+
+<span>{{remaining()}} of {{todos.length}} remaining</span>
+[ <a href="" ng-click="archive()">Pending</a> ]
+[ <a href="" ng-click="doneList()">Completed</a> ]
+<!-- [ <a href="" ng-click="allTask()">All Task</a> ] -->
+
+ <form>
+        <input type="text" ng-model="todoText"  size="30"
+               placeholder="add new todo here">
+        <button ng-click="addTodo()">Add</button>
+      </form>
+
+<ul>
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done">
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+          <button ng-click="deleteThis($index)">Delete</button>
+        </li>
+      </ul>
+     
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

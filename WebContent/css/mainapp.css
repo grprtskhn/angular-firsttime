@@ -1,0 +1,10 @@
+.square{
+	width: 200px;
+	height: 200px;
+	background: red;
+}
+
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
